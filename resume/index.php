@@ -95,42 +95,6 @@
             </div>
         </section>
         <hr class="m-0" />
-        <!-- Education-->
-        <section class="resume-section" id="education">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Education</h2>
-                <?php
-                $koneksi = mysqli_connect('localhost', 'root', '', 'resume');
-                $displayeducation = mysqli_query($koneksi, 'select * from education');
-                while ($edu=mysqli_fetch_assoc($displayeducation))
-                {
-                ?>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0"> <?php
-                         echo $edu['schoolname'];
-                        ?>
-                        </h3>
-                        <div class="subheading mb-3"><?php
-                         echo $edu['majors'];
-                        ?>
-                        </div>
-                        <div>
-                        <?php
-                         echo $edu['desc'];
-                        ?>
-                        </div>
-                        <p>
-                        <?php
-                         echo $edu['gpa'];
-                        }       
-                        ?>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0" />
         <!-- Skills-->
         <section class="resume-section" id="skills">
             <div class="resume-section-content">
